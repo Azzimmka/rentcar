@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { SearchContextProvider } from "@/context/search";
+
 
 const archivoBlack = Archivo_Black({
   weight: "400",
@@ -22,16 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body
-        suppressHydrationWarning
-        className={`${archivoBlack.variable} antialiased`}
-        style={{ fontFamily: "var(--font-archivo-black), sans-serif" }}
-      >
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <SearchContextProvider>
+        <html lang="ru">
+          <body
+            suppressHydrationWarning
+            className={`${archivoBlack.variable} antialiased`}
+            style={{ fontFamily: "var(--font-archivo-black), sans-serif" }}
+            >
+            <main>{children}</main>
+    
+          </body>
+        </html>
+    </SearchContextProvider>
   );
 }
