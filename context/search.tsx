@@ -2,16 +2,27 @@
 
 import { createContext, useContext, useState } from "react"
 
-//create context
-export const SearchContext = createContext('')
+// типы
+type SearchContextType = {
+  searchActive: boolean
+  setsearchActive: (value: boolean) => void
+}
 
-//provider
-export const SearchContextProvider = ({childern}: any) => {
-    return(
-    <SearchContext.Provider value="search context">
-        {childern}
+// создаём контекст с правильным типом
+export const SearchContext = createContext<SearchContextType>({
+  searchActive: false,
+  setsearchActive: () => {},
+})
+
+// провайдер
+export const SearchContextProvider = ({ children }: { children: React.ReactNode }) => {
+  const [searchActive, setsearchActive] = useState(false)
+
+  return (
+    <SearchContext.Provider value={{ searchActive, setsearchActive }}>
+      {children}
     </SearchContext.Provider>
-    )   
+  )
 }
 
 export const useSearchContext = () => useContext(SearchContext)

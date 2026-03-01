@@ -18,8 +18,8 @@
 
   --color-primary: #101828;
   --color-secondary: #667085;
-  --color-accent: #ed1d24;
-  --color-accent-hover: #dd242a;
+  --color-accent: #e55b5b;
+  --color-accent-hover: #c43e3e;
   --color-hover: #dd242a;
   --color-body: #dedede
 }
@@ -80,7 +80,7 @@
   }
 
   .btn-accent {
-    @apply bg-accent hover:bg-accent-hover
+    @apply bg-accent hover:bg-accent-hover cursor-pointer
   }
 
   .active {

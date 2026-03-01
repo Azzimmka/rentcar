@@ -1,7 +1,7 @@
 export default function About(){
     return (
-        <div>
+        <section className="section flex items-center bg-pink-400" id="about">
             About
-        </div>
+        </section>
     )
 }

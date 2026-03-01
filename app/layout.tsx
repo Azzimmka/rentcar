@@ -4,6 +4,7 @@ import "./globals.css";
 import { SearchContextProvider } from "@/context/search";
 
 
+
 const archivoBlack = Archivo_Black({
   weight: "400",
   subsets: ["latin"],
@@ -22,17 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SearchContextProvider>
-        <html lang="ru">
+      <html lang="ru">
           <body
             suppressHydrationWarning
             className={`${archivoBlack.variable} antialiased`}
             style={{ fontFamily: "var(--font-archivo-black), sans-serif" }}
             >
+              <SearchContextProvider>
             <main>{children}</main>
     
-          </body>
-        </html>
     </SearchContextProvider>
+          </body>
+      </html>
   );
 }

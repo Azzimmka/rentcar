@@ -1,5 +1,7 @@
 export default function Cta(){
     return (
-        <div>Cta</div>
+        <div className="pt-24 xl:pt-48 flex items-end pb-0 bg-[#b2b7c2]/10" id="contact">
+            Cta
+        </div>
     )
 }
