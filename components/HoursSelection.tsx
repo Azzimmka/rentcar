@@ -16,7 +16,7 @@ import {format, addDays} from "date-fns"
 import 'react-date-range/dist/styles.css'
 import 'react-date-range/dist/theme/default.css'
 
-const hours: string[] = ['10:00 AM', '12:00 AM', '14:00 AM', '16:00']
+const hours: string[] = ['10:00 AM', '12:00 AM', '14:00 AM', '16:00 AM']
 
 export default function HoursSelection(){
     const [hour, setHour] = useState<string>('10:00 AM')
@@ -35,14 +35,24 @@ export default function HoursSelection(){
                                         : <BiChevronDown className="text-secondary ml-1 hidden xl:block"/>
                                     }
                                 </div>
-                                <div className="flex items-center gap-x-3 xl:ml-6 opacity-70">
-                                    {hour}
+                                <div className="flex items-center justify-center gap-x-3">
+                                    <div className="xl:ml-6 opacity-70">
+                                        {hour}
+                                    </div>
+                                    <FaArrowRightLong className="text-accent text-[12px]" />
+                                    <div className=" opacity-70">
+                                        {hour}
+                                    </div>
                                 </div>
                     </MenuButton>
 
                     {/* items */}
-                    <MenuItems className='absolute mt-1 w-full xl:max-w-max bg-white shadow-lg rounded-xl z-100 py-2 outline-none'>
-                               menu items        
+                    <MenuItems className='absolute -top-[170px] xl:-top-[230px] flex  flex-col xl:text-center xl:gap-y-3    w-full bg-white shadow-lg rounded-xl z-100 py-2 outline-none'>
+                        {hours.map((hour, index)=>{
+                            return <div key={index} onClick={()=>setHour(hour)} className="active:bg-gray-100 hover:bg-gray-100 py-2 cursor-pointer duration-150">
+                                {hour}
+                            </div>
+                        })}
                     </MenuItems>
                 </div>
             )}

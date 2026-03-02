@@ -42,7 +42,7 @@ export default function LocationSelection(){
                     </MenuButton>
 
                     {/* items */}
-                    <MenuItems className='absolute top-20 left-0 mt-1 w-full bg-white shadow-lg rounded-xl z-50 py-2 outline-none'>
+                    <MenuItems className='absolute -top-45 left-0 mt-1 w-full bg-white shadow-lg rounded-xl z-50 py-2 outline-none'>
                         {locations.map((location, index) => (
                             <MenuItem key={index}>
                                 <button
