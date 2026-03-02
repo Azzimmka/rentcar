@@ -66,10 +66,10 @@ export default function Header(){
                 {/* nav */}
                 <nav className={`${nav 
                 ?
-                'max-h-max py-8 px-4 xl:py-0 xl:px-0' 
+                'max-h-max py-8 px-4 xl:py-0 xl:px-0 overflow-visible' 
                 :
-                'max-h-0 xl:max-h-max'} 
-                flex flex-col xl:flex-row xl:w-max xl:gap-x-8 w-full bg-white  gap-y-6 xl:font-medium overflow-hidden xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px xl:normal-case]`}>
+                'max-h-0 xl:max-h-max overflow-hidden'} 
+                flex flex-col xl:flex-row xl:w-max xl:gap-x-8 w-full bg-white  gap-y-6 xl:font-medium xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px xl:normal-case]`}>
                     <Link to="home" className="cursor-pointer" activeClass="active" smooth={desktopMode} spy={true} >
                        Home
                     </Link>

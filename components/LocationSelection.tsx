@@ -43,13 +43,13 @@ export default function LocationSelection(){
 
                     {/* items */}
                     <MenuItems className='absolute top-20 left-0 mt-1 w-full bg-white shadow-lg rounded-xl z-50 py-2 outline-none'>
-                        {locations.map((loc, index) => (
+                        {locations.map((location, index) => (
                             <MenuItem key={index}>
                                 <button
-                                    onClick={() => setLocation(loc)}
+                                    onClick={() => setLocation(location)}
                                     className='w-full text-left px-4 py-3 text-sm text-primary hover:bg-gray-50 flex items-center gap-x-2 transition-colors duration-150'>
                                     <FaMapMarkerAlt className='text-accent shrink-0'/>
-                                    {loc}
+                                    {location}
                                 </button>
                             </MenuItem>
                         ))}
