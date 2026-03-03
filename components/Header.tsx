@@ -45,7 +45,7 @@ export default function Header(){
     }, [])
     
     return(
-        <header className={`${header ? 'bg-white shadow-md py-2' : 'bg-transparent shadow-none py-4'} fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300`}>
+        <header className={`${header ? 'bg-white shadow-md py-2' : 'bg-transparent shadow-none py-4'} fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300 overflow-hidden`}>
             <div className="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
                 {/* logo */}
                 <div className="flex items-center justify-between px-4">
@@ -69,7 +69,7 @@ export default function Header(){
                 'max-h-max py-8 px-4 xl:py-0 xl:px-0 overflow-visible' 
                 :
                 'max-h-0 xl:max-h-max overflow-hidden'} 
-                flex flex-col xl:flex-row xl:w-max xl:gap-x-8 w-full bg-white  gap-y-6 xl:font-medium xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px xl:normal-case]`}>
+                flex flex-col xl:flex-row xl:w-max xl:gap-x-8 w-full bg-white gap-y-6 xl:font-medium xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case`}>
                     <Link to="home" className="cursor-pointer" activeClass="active" smooth={desktopMode} spy={true} >
                        Home
                     </Link>

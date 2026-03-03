@@ -32,7 +32,11 @@
 
 @layer base {
   body {
-    @apply text-primary bg-body 
+    @apply text-primary bg-body overflow-x-hidden
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   p {
