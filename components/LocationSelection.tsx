@@ -7,6 +7,7 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react"
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 
+
 // location data
 const locations = [
     'Shify Academy road street',
