@@ -82,12 +82,6 @@ export default function Header(){
                     <Link to="why" className="cursor-pointer" activeClass="active" smooth={desktopMode} spy={true} >
                        Why us
                     </Link>
-                    <Link to="testimonials" className="cursor-pointer" activeClass="active" smooth={desktopMode} spy={true} >
-                       Testimonials
-                    </Link>
-                    <Link to="contact" className="cursor-pointer" activeClass="active" smooth={desktopMode} spy={true} >
-                       Contact
-                    </Link>
                     <Link to="/" className="cursor-pointer xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto" activeClass="active" smooth={desktopMode} spy={true} >
                        See all cars
                     </Link>
