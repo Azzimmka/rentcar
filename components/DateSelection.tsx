@@ -59,7 +59,7 @@ export default function DateSelection(){
                     </MenuButton>
 
                     {/* items */}
-                    <MenuItems className='absolute mt-1 w-full -top-[388px] xl:max-w-max bg-white shadow-lg rounded-xl z-100 p-2 outline-none'>
+                    <MenuItems className='absolute mt-1 w-full xl:top-20 -top-[388px] xl:max-w-max bg-white shadow-lg rounded-xl z-100 p-2 outline-none'>
                         <DateRange
                             editableDateInputs={true}
                             moveRangeOnFirstSelection={false}

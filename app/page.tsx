@@ -20,12 +20,8 @@ export default function Home() {
       <Cars />
       <About />
       <Why />
-      <Testimonial />
-      <Cta />
-      <Footer />
-      <BacktoTopBtn />
 
-      <div className="h-[4000px] border-4"></div>
+      <Footer />
     </main>
   );
 }
